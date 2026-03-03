@@ -1,0 +1,66 @@
+[package]
+name = "smriti"
+version = "0.1.0"
+edition = "2021"
+description = "A lightning-fast, self-hosted knowledge store and memory layer for AI agents. MCP server, knowledge graph, wiki-links, full-text search — built in Rust."
+license = "MIT"
+authors = ["Kishore"]
+repository = "https://github.com/smriti-AA/smriti"
+homepage = "https://github.com/smriti-AA/smriti"
+keywords = ["ai", "agents", "mcp", "knowledge-graph", "memory"]
+categories = ["command-line-utilities", "database", "text-processing"]
+readme = "README.md"
+
+[[bin]]
+name = "smriti"
+path = "src/main.rs"
+
+[dependencies]
+# Web framework & async
+axum = { version = "0.7", features = ["json", "query"] }
+tokio = { version = "1", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Database
+rusqlite = { version = "0.31", features = ["bundled", "vtab"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Knowledge graph
+petgraph = "0.6"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# Utilities
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+regex = "1"
+thiserror = "1"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Sync engine
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+sha2 = "0.10"
+base64 = "0.22"
+
+# MCP / JSON-RPC
+async-trait = "0.1"
+
+# System info
+hostname = "0.4"
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
