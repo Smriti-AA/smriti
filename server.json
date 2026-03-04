@@ -1,7 +1,7 @@
 {
   "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
   "name": "io.github.smriti-aa/smriti",
-  "description": "Self-hosted knowledge store and memory layer for AI agents with knowledge graph, wiki-links, full-text search, and agent memory with TTL. Built in Rust.",
+  "description": "Self-hosted knowledge store and memory layer for AI agents with knowledge graph and full-text search.",
   "repository": {
     "url": "https://github.com/smriti-AA/smriti",
     "source": "github",
@@ -13,6 +13,8 @@
   },
   "packages": [
     {
+      "registryType": "crate",
+      "identifier": "smriti",
       "registry_name": "crates.io",
       "name": "smriti",
       "version": "0.1.0",
