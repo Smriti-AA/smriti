@@ -1,6 +1,6 @@
 {
   "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
-  "name": "io.github.smriti-aa/smriti",
+  "name": "io.github.sru-stack9/smriti",
   "description": "Self-hosted knowledge store and memory layer for AI agents with knowledge graph and FTS.",
   "repository": {
     "url": "https://github.com/smriti-AA/smriti",
