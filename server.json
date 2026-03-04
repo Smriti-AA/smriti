@@ -1,33 +1,20 @@
 {
-  "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
   "name": "io.github.sru-stack9/smriti",
   "description": "Self-hosted knowledge store and memory layer for AI agents with knowledge graph and FTS.",
   "repository": {
     "url": "https://github.com/smriti-AA/smriti",
-    "source": "github",
-    "id": "smriti-AA/smriti"
+    "source": "github"
   },
-  "version_detail": {
-    "version": "0.1.0",
-    "release_date": "2026-03-03"
-  },
+  "version": "0.1.0",
   "packages": [
     {
       "registryType": "crate",
       "identifier": "smriti",
-      "registry_name": "crates.io",
-      "name": "smriti",
       "version": "0.1.0",
-      "runtime": {
-        "type": "binary",
-        "config": {
-          "command": {
-            "name": "smriti",
-            "args": ["mcp"]
-          }
-        }
-      },
-      "environment_variables": []
+      "transport": {
+        "type": "stdio"
+      }
     }
   ],
   "tools": [
@@ -63,6 +50,5 @@
       "name": "memory_list",
       "description": "List all memories in a namespace"
     }
-  ],
-  "remotes": []
+  ]
 }
