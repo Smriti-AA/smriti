@@ -1,0 +1,66 @@
+{
+  "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
+  "name": "io.github.smriti-aa/smriti",
+  "description": "Self-hosted knowledge store and memory layer for AI agents with knowledge graph, wiki-links, full-text search, and agent memory with TTL. Built in Rust.",
+  "repository": {
+    "url": "https://github.com/smriti-AA/smriti",
+    "source": "github",
+    "id": "smriti-AA/smriti"
+  },
+  "version_detail": {
+    "version": "0.1.0",
+    "release_date": "2026-03-03"
+  },
+  "packages": [
+    {
+      "registry_name": "crates.io",
+      "name": "smriti",
+      "version": "0.1.0",
+      "runtime": {
+        "type": "binary",
+        "config": {
+          "command": {
+            "name": "smriti",
+            "args": ["mcp"]
+          }
+        }
+      },
+      "environment_variables": []
+    }
+  ],
+  "tools": [
+    {
+      "name": "notes_create",
+      "description": "Create a note with title, content, auto-extracted wiki-links and tags"
+    },
+    {
+      "name": "notes_read",
+      "description": "Read a note by ID"
+    },
+    {
+      "name": "notes_search",
+      "description": "Full-text search across all notes using SQLite FTS5"
+    },
+    {
+      "name": "notes_list",
+      "description": "List notes with optional filtering and sorting"
+    },
+    {
+      "name": "notes_graph",
+      "description": "Traverse the knowledge graph — backlinks, forward links, related notes"
+    },
+    {
+      "name": "memory_store",
+      "description": "Store agent memory with namespace and optional TTL"
+    },
+    {
+      "name": "memory_retrieve",
+      "description": "Retrieve memory by key and namespace"
+    },
+    {
+      "name": "memory_list",
+      "description": "List all memories in a namespace"
+    }
+  ],
+  "remotes": []
+}
